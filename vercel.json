@@ -1,0 +1,9 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "installCommand": "npm install --prefix talentlink-landing",
+  "buildCommand": "npm run build --prefix talentlink-landing",
+  "outputDirectory": "talentlink-landing/dist",
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}
