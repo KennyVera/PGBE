@@ -1,0 +1,219 @@
+.section {
+  padding: 6rem 0;
+  background: var(--bg-primary);
+  border-top: 1px solid var(--border);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.tracks {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.track {
+  background: var(--bg-secondary);
+  border: 2px solid var(--border-strong);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.accentGreen { border-top: 4px solid var(--accent-primary); }
+.accentGold { border-top: 4px solid var(--accent-gold); }
+.accentDark { border-top: 4px solid var(--text-primary); }
+
+.trackHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.trackIconWrap {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid var(--text-primary);
+  background: var(--bg-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-primary);
+  flex-shrink: 0;
+}
+
+.trackTitle {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  line-height: 1;
+  margin-bottom: 0.25rem;
+}
+
+.trackSubtitle {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.trackScroll {
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 0.5rem;
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent-primary) var(--bg-primary);
+}
+
+.trackScroll::-webkit-scrollbar {
+  height: 6px;
+}
+
+.trackScroll::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+  border-radius: 999px;
+}
+
+.trackScroll::-webkit-scrollbar-thumb {
+  background: var(--accent-primary);
+  border-radius: 999px;
+}
+
+.stepsRow {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  min-width: min-content;
+  padding: 0.25rem 0.25rem 0.5rem;
+}
+
+.stepGroup {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.stepBox {
+  width: 168px;
+  min-height: 180px;
+  padding: 1rem;
+  background: var(--bg-primary);
+  border: 2px solid var(--text-primary);
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: relative;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.stepBox:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-soft);
+}
+
+.stepNum {
+  position: absolute;
+  top: 0.65rem;
+  right: 0.75rem;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  letter-spacing: 0.06em;
+}
+
+.stepIconWrap {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-strong);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-primary);
+}
+
+.stepLabel {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  line-height: 1.15;
+  color: var(--text-primary);
+}
+
+.stepDesc {
+  font-size: 0.75rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+  flex: 1;
+}
+
+.arrow {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  width: 44px;
+  padding: 0 4px;
+  color: var(--accent-primary);
+}
+
+.arrowLine {
+  flex: 1;
+  height: 2px;
+  background: var(--text-primary);
+  transform-origin: left;
+  margin-right: -6px;
+}
+
+.arrowIcon {
+  flex-shrink: 0;
+  stroke-width: 2.5px;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 4rem 0;
+  }
+
+  .track {
+    padding: 1.25rem;
+  }
+
+  .stepBox {
+    width: 150px;
+    min-height: 170px;
+  }
+
+  .arrow {
+    width: 32px;
+  }
+}
+
+@media (min-width: 1100px) {
+  .trackScroll {
+    overflow-x: visible;
+  }
+
+  .stepsRow {
+    justify-content: center;
+    flex-wrap: nowrap;
+    width: 100%;
+  }
+
+  .stepBox {
+    flex: 1;
+    max-width: 190px;
+    min-width: 150px;
+  }
+}

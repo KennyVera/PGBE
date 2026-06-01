@@ -9,6 +9,8 @@ import styles from './Navbar.module.css';
 const navLinks = [
   { label: 'Equipo', href: '#team' },
   { label: 'Proyecto', href: '#hero' },
+  { label: 'Roles', href: '#roles' },
+  { label: 'Flujos', href: '#flow' },
   { label: 'Características', href: '#features' },
   { label: 'IA', href: '#ai' },
   { label: 'Stack', href: '#stack' },

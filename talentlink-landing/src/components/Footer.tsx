@@ -10,7 +10,8 @@ import styles from './Footer.module.css';
 const navLinks = [
   { label: 'Equipo', href: '#team' },
   { label: 'Proyecto', href: '#hero' },
-  { label: 'Características', href: '#features' },
+  { label: 'Roles', href: '#roles' },
+  { label: 'Flujos', href: '#flow' },
   { label: 'IA', href: '#ai' },
   { label: 'Stack', href: '#stack' },
   { label: 'Seguridad', href: '#security' },

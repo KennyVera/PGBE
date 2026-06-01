@@ -7,6 +7,7 @@ import Hero from './components/Hero';
 import Stats from './components/Stats';
 import WhatIs from './components/WhatIs';
 import Roles from './components/Roles';
+import AppFlow from './components/AppFlow';
 import AISection from './components/AISection';
 import Features from './components/Features';
 import TechStack from './components/TechStack';
@@ -24,6 +25,7 @@ export default function App() {
         <Stats />
         <WhatIs />
         <Roles />
+        <AppFlow />
         <AISection />
         <Features />
         <TechStack />
