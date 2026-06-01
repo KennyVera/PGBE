@@ -1,0 +1,81 @@
+.light {
+  --decor-fill: var(--accent-primary);
+}
+
+.dark {
+  --decor-fill: #ffffff;
+}
+
+.semiLeft,
+.semiRight {
+  position: absolute;
+  width: clamp(120px, 18vw, 220px);
+  height: clamp(240px, 36vw, 440px);
+  border-radius: 50%;
+  background: var(--decor-fill);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.semiLeft {
+  left: -8%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.semiRight {
+  right: -8%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.dot {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--decor-fill);
+  z-index: 2;
+}
+
+.dotTL {
+  top: 2rem;
+  left: 2rem;
+}
+
+.dotTR {
+  top: 2rem;
+  right: 2rem;
+}
+
+.dotsRow {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.dotSolid {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--accent-primary);
+}
+
+@media (max-width: 768px) {
+  .semiLeft,
+  .semiRight {
+    opacity: 0.35;
+    width: 90px;
+    height: 180px;
+  }
+
+  .dotTL,
+  .dotTR {
+    top: 1rem;
+    width: 10px;
+    height: 10px;
+  }
+
+  .dotTL { left: 1rem; }
+  .dotTR { right: 1rem; }
+}
