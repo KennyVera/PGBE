@@ -65,16 +65,26 @@
 }
 
 .links a {
+  display: inline-block;
   font-size: 0.78rem;
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--text-secondary);
-  transition: color 0.25s ease;
+  padding: 0.45rem 0.85rem;
+  border-radius: 999px;
+  transition: color 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
 }
 
 .links a:hover {
   color: var(--accent-primary);
+  background: rgba(2, 90, 39, 0.06);
+}
+
+.linkActive {
+  color: var(--accent-primary) !important;
+  background: rgba(2, 90, 39, 0.12);
+  box-shadow: 0 2px 12px rgba(2, 90, 39, 0.2), inset 0 0 0 1px rgba(2, 90, 39, 0.15);
 }
 
 .cta {
@@ -131,11 +141,21 @@
 }
 
 .drawerLinks a {
+  display: inline-block;
   font-family: var(--font-display);
   font-size: 1.5rem;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--text-primary);
+  padding: 0.35rem 0.75rem;
+  border-radius: 8px;
+  transition: background 0.25s ease, box-shadow 0.25s ease;
+}
+
+.drawerLinkActive {
+  background: rgba(2, 90, 39, 0.12);
+  box-shadow: 0 2px 12px rgba(2, 90, 39, 0.18);
+  color: var(--accent-primary) !important;
 }
 
 .drawerCta {
